@@ -1,0 +1,186 @@
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Centraliza o conteúdo na página */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
+    margin-top: -400px;
+  }
+  
+  /* Estilo para a imagem */
+  .image-container img {
+    width: 100%;
+    max-width: 250px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-bottom: 100px;
+    margin-left: -20px;
+  }
+  
+  /* Estilo para os campos de entrada */
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+  }
+  
+  .name-label,
+  .password-label {
+    position: absolute;
+    font-size: 22px;
+    color: black;
+  
+  }
+  
+  .name-label {
+    top: -173px;
+    left: 34px;
+  
+  }
+  
+ 
+  h2{
+    color:white;
+    display: flex;
+    margin-top: -80px;
+    margin-bottom: 0px;
+  }
+
+  
+
+.circle-image-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 200px; /* Define o espaço para a imagem ficar mais abaixo */
+
+}
+
+.circle-image-container img {
+    width: 130px; /* Tamanho inicial da imagem */
+    height: 130px; /* Mesma largura e altura para o círculo */
+    border-radius: 50%; /* Torna a imagem circular */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+    cursor: pointer;
+    object-fit: cover; /* Garante que a imagem se ajuste ao círculo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.circle-image-container img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Realça a sombra ao passar o mouse */
+}
+
+/* Estilo para o botão de adicionar */
+.add-button {
+    position: fixed;
+    bottom: 20px; /* Distância da parte inferior */
+    right: 20px; /* Distância da lateral direita */
+    width: 60px;
+    height: 60px;
+    background-color: #fdfdfd; /* Cor do botão */
+    color: rgb(7, 0, 0); /* Cor do símbolo "+" */
+    font-size: 24px; /* Tamanho do símbolo "+" */
+    border: none;
+    border-radius: 50%; /* Torna o botão circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s; /* Animação */
+}
+
+/* Efeito ao passar o mouse no botão */
+.add-button:hover {
+    background-color: #2577d3; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito ao clicar no botão */
+.add-button:active {
+    transform: scale(0.95); /* Reduz tamanho temporariamente */
+}
+
+  
+  @media (min-width: 1200px) {
+  
+    .name-label,
+    .password-label {
+      font-size: 22px;
+      /* Mantém o tamanho maior das labels */
+    }
+  
+    .name-label {
+      top: -173px;
+      left: 34px;
+    }
+  
+  
+}
+  
+  
+  /* Estilo para os campos de input */
+  
+  
+  h2{
+      color:white;
+      display: flex;
+      margin-bottom: -200px;
+    }
+
+
+    input {
+      display: flex;
+      justify-content: center;
+      padding: 15px 30px 14px 60px;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Garamond', sans-serif;
+      width: 100%;
+      max-width: 500px;
+      margin-top: -180px;
+      margin-bottom: 25px;
+      border: 1px solid #080707;
+      border-radius: 50px;
+      height: 40px;
+    }
+    
+    /* Estilo do placeholder */
+    input::placeholder {
+      color: #080707;
+      transition: 200ms ease-in-out;
+    }
+    
+    /* Estilo ao passar o mouse */
+    input:hover {
+      border: 1px solid #78b2ff;
+    }
+    
+    input:hover::placeholder {
+      color: #8a8a8a;
+    }
+    
+    /* Estilo ao focar no input */
+    input:focus {
+      border: #3189fe;
+    }
+    
+    input:focus::placeholder {
+      color: #1d1d1d;
+    }

@@ -1,0 +1,325 @@
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ocupa toda a tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10; /* Eleva o splash acima do restante do conteúdo */
+    background: #000000; /* Cor de fundo */
+    transition: 1s ease-in-out; /* Transição suave ao sair */
+  }
+  
+  .intro img {
+    position: absolute;
+    top: 50px; /* Alinha no topo */
+    margin: auto; /* Centraliza horizontalmente */
+    left: 150px;
+    right: 0;
+    height: 400px; /* Aumenta a altura da imagem */
+    max-width: 80%; /* Aumenta a largura relativa ao tamanho da tela */
+    object-fit: contain; /* Garante que a imagem seja proporcional */
+  }
+  
+  
+  .logo {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .logo-parts {
+    position: relative;
+    display: inline-block;
+    bottom: 100px; /* Começa deslocado */
+    opacity: 0; /* Invisível inicialmente */
+    transition: ease-in-out 0.5s; /* Suave */
+  }
+  
+  .logo-parts.active {
+    bottom: 0; /* Volta ao seu lugar */
+    opacity: 1; /* Torna visível */
+    transition: ease-in-out 0.5s;
+  }
+  
+  .logo-parts.fade {
+    bottom: 250px; /* Sai para baixo */
+    opacity: 0; /* Fica invisível */
+    transition: ease-in-out 0.5s;
+  }
+  
+  .content {
+    width: 100%;
+    padding: 50px;
+    font-size: 2rem;
+    z-index: 1; 
+  }
+  
+  
+  /* Centraliza o conteúdo na página */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
+    margin-top: -240px;
+  }
+  
+  /* Estilo para a imagem */
+  .image-container img {
+    width: 100%;
+    max-width: 370px;
+    position: relative;
+    bottom: 120px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-bottom: -85px;
+    margin-left: -35px;
+  }
+  
+  /* Estilo para os campos de entrada */
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+  }
+  
+  .name-label,
+  .password-label {
+    position: absolute;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+  
+  }
+  
+  .name-label {
+    top: 7px;
+    left: 34px;
+  
+  }
+  
+  .password-label {
+    top: 73px;
+    left: 34px;
+  
+  
+  }
+  
+  .codigo{
+    display: flex;
+    position: absolute;
+    width: 390px;
+    right: 700px;
+    left: 523px;
+    font-size: 20px;
+    /* Ajusta o tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    top: 163px;
+    /* Espaçamento acima */
+    color: #fff;
+    /* Cor do texto */
+    /* Alinha o texto com a label de senha */
+  }
+
+ 
+  input {
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px 14px 60px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Garamond', sans-serif;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    border: 1px solid #080707;
+    border-radius: 50px;
+    height: 40px;
+  }
+  
+  /* Estilo do placeholder */
+  input::placeholder {
+    color: #080707;
+    transition: 200ms ease-in-out;
+  }
+  
+  /* Estilo ao passar o mouse */
+  input:hover {
+    border: 1px solid #78b2ff;
+  }
+  
+  input:hover::placeholder {
+    color: #8a8a8a;
+  }
+  
+  /* Estilo ao focar no input */
+  input:focus {
+    border: #3189fe;
+  }
+  
+  input:focus::placeholder {
+    color: #1d1d1d;
+  }
+  
+  /* Estilo para o botão */
+  button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    margin-top: 40px;
+    left: 625px;
+    position: absolute;
+  }
+  
+  button:hover {
+    background-color: red;
+  }
+  
+  /* Estilo para os links */
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para o texto embaixo */
+  p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  
+  
+  
+  @media (min-width: 1200px) {
+  
+    .name-label,
+    .password-label {
+      font-size: 22px;
+      /* Mantém o tamanho maior das labels */
+    }
+  
+    .name-label {
+      top: 7px;
+      left: 510px;
+    }
+  
+    .password-label {
+      top: 73px;
+      left: 510px;
+    }
+  
+  
+  
+  
+  
+    /* Estilo para os campos de input */
+    input {
+      display: flex;
+      justify-content: center;
+      padding: 15px 30px 14px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Garamond', sans-serif;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 15px;
+      border: 1px solid #080707;
+      border-radius: 50px;
+      height: 40px;
+    }
+  
+    /* Estilo do placeholder */
+    input::placeholder {
+      color: #080707;
+      transition: 200ms ease-in-out;
+    }
+  
+    /* Estilo ao passar o mouse */
+    input:hover {
+      border: 1px solid #78b2ff;
+    }
+  
+    input:hover::placeholder {
+      color: #8a8a8a;
+    }
+  
+    /* Estilo ao focar no input */
+    input:focus {
+      border: #3189fe;
+    }
+  
+    input:focus::placeholder {
+      color: #1d1d1d;
+    }
+  
+    /* Estilo para o botão */
+    button {
+      padding: 10px 15px;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 160px;
+      margin-top: 40px;
+      left: 600px;
+      position: absolute;
+    }
+  
+    button:hover {
+      background-color: red;
+    }
+  
+    /* Estilo para os links */
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    /* Estilo para o texto embaixo */
+    p {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+  
+  }

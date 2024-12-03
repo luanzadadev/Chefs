@@ -1,0 +1,283 @@
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centraliza o conteúdo na página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(180deg, #FF0048 0%, #E40041 64.5%, #99002B 100%),
+        linear-gradient(180deg, rgba(242, 26, 30, 0) 0%, rgba(242, 26, 30, 0.9) 100%);
+    ;
+}
+
+.image-container {
+    text-align: center;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    margin-top: -200px;
+    /* Define o espaço para a imagem ficar mais abaixo */
+
+}
+
+.image-container img {
+    margin-bottom: 80px;
+    position: relative;
+    top: 20px;
+    margin: 10px;
+    width: 130px;
+    /* Tamanho inicial da imagem */
+    height: 130px;
+    /* Mesma largura e altura para o círculo */
+    border-radius: 50%;
+    /* Torna a imagem circular */
+    object-fit: cover;
+    /* Garante que a imagem se ajuste ao círculo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.575);
+    display: block;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+}
+
+.nome-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    position: relative;
+    top: 20px;
+}
+
+
+.name-label,
+.password-label {
+    position: absolute;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+
+}
+
+.name-label {
+    top: 7px;
+    left: 34px;
+
+}
+
+.password-label {
+    top: 73px;
+    left: 34px;
+
+
+}
+
+.Senha {
+    display: flex;
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: -3px;
+    /* Espaçamento acima */
+    color: #fff;
+    /* Cor do texto */
+    margin-left: -160px;
+    /* Alinha o texto com a label de senha */
+}
+
+.Senha a {
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+
+
+    color: white;
+    /* Cor do link */
+    /* Negrito no link */
+}
+
+.Senha a:hover {
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+    color: #95aecf;
+    /* Altera a cor ao passar o mouse */
+}
+
+
+.Link {
+    display: flex;
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 80px;
+    /* Espaçamento acima */
+    color: #fff;
+    /* Cor do texto */
+    margin-left: -5px;
+    /* Alinha o texto com a label de senha */
+}
+
+.Link a {
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+
+
+    color: white;
+    /* Cor do link */
+    /* Negrito no link */
+}
+
+.Link a:hover {
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+    color: #3189fe;
+    /* Altera a cor ao passar o mouse */
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    /* Tamanho do botão */
+    margin-top: 40px;
+}
+
+button:hover {
+    background-color: rgba(199, 65, 65, 0.623);
+}
+
+.link-acesso{
+    display: flex;
+    position: relative;
+    margin-top: 113px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    margin: 0;
+    top: 100px;
+    
+
+}
+
+@media (min-width: 1200px) {
+
+    .name-label,
+    .password-label {
+        font-size: 22px;
+        /* Mantém o tamanho maior das labels */
+    }
+
+    .name-label {
+        top: 7px;
+        left: 34px;
+    }
+
+    .password-label {
+        top: 73px;
+        left: 34px;
+    }
+}
+
+
+
+
+/* Estilo para os campos de input */
+input {
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px 14px 60px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Garamond', sans-serif;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    border: 1px solid #080707;
+    border-radius: 50px;
+    height: 40px;
+}
+
+/* Estilo do placeholder */
+input::placeholder {
+    color: #080707;
+    transition: 200ms ease-in-out;
+}
+
+/* Estilo ao passar o mouse */
+input:hover {
+    border: 1px solid #78b2ff;
+}
+
+input:hover::placeholder {
+    color: #8a8a8a;
+}
+
+/* Estilo ao focar no input */
+input:focus {
+    border: #3189fe;
+}
+
+input:focus::placeholder {
+    color: #1d1d1d;
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    /* Tamanho do botão */
+    margin-top: 40px;
+}
+
+button:hover {
+    background-color: red;
+}
+
+/* Estilo para os links */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o texto embaixo */
+p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
